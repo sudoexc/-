@@ -37,3 +37,31 @@ console.log(typeof(+'g'));
 console.log(typeof(parseInt('15px', 15)));
 
 
+// ВСЕ ЧТО МЫ ПОЛУЧАЕМ ОТ ПОЛЬЗОВАТЕЛЯ ВСЕГДА БУДЕТ ТИПОМ ДАННЫХ СТРОКА
+
+
+// в булиновое значение
+
+0, '', null, undefined, NaN;   //это все всегда приходит как false, а все остальное true
+
+
+// способ №1
+let switcher = null;
+
+if (switcher) {
+    console.log('working...');
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log('working...');
+}
+
+
+// способ №2
+console.log(typeof(Boolean(4)));
+
+
+// способ №3
+console.log(typeof(!!'444')); // !! перед строкой превращает строку в булинувую тип данных. работает так же с цифрами
